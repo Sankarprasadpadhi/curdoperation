@@ -75,11 +75,31 @@ WSGI_APPLICATION = 'CurdOperation.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'student.sqlite3',
+#    }
+#}
+
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'student.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'd8scquq9kalbm6',
+
+        'USER': 'iousfltewuplmg',
+
+        'PASSWORD': '842c7bcffb4ee3979050d77a63e9efc53ddd97d07f3de5e03958917be6f89ebb',
+
+        'HOST': 'ec2-34-227-120-79.compute-1.amazonaws.com',
+
+        'PORT': '5432',
+
     }
+
 }
 
 
