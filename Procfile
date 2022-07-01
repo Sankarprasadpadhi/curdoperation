@@ -1,1 +1,1 @@
-web: gunicorn pgbooking.wsgi --log-file -
+web: gunicorn CurdOperation.wsgi --log-file -
