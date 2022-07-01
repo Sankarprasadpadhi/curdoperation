@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Home</title>
+    {% include 'bootstarp.html' %}
+</head>
+<body>
+    <div style="padding: 100px" class="container">
+    <center>
+        <h2>Home Page</h2><hr>
+        <a class="btn btn-primary" href="{% url 'show' %}">View Student</a>
+        <a class="btn btn-warning" href="{% url 'add' %}">Add Student</a>
+    </center>
+    </div>
+</body>
+</html>

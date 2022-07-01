@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Student Info</title>
+    {% include 'bootstarp.html' %}
+</head>
+<body>
+    <div style="padding: 100px">
+    <center>
+        <h2>Student Info</h2><hr>
+        <div style="padding: 30px">
+            <table border="2" class="table">
+                <tr>
+                    <th>Full Name</th>
+                    <th>Mobile Number</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                <tr>
+                {% if data %}
+                    {% for x in data %}
+                        <td>{{ x.first_name }} {{ x.last_name }}</td>
+                        <td>{{ x.mobile }}</td>
+                        <td>{{ x.email }}</td>
+                        <td>{{ x.address }}</td>
+                        <td><a href="{% url 'edit' x.id %}">edit</a></td>
+                        <td><a href="{% url 'delete' x.id %}">delete</a></td>
+                    {% endfor %}
+                {% else %}
+                    <td colspan="6">No Data Available</td>
+                {% endif %}
+                </tr>
+            </table>
+        </div>
+    </center>
+    </div>
+</body>
+</html>

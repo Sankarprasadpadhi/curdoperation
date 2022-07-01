@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Student Info</title>
+    {% include 'bootstarp.html' %}
+</head>
+<body>
+    <div style="padding: 100px">
+    <center>
+        <h2>Edit Student Info</h2><hr>
+        <div style="padding: 30px">
+            <form action="{% url 'edit' id %}" method="post">
+            {% csrf_token %}
+                <label>First Name : </label>
+                <input type="text" name="first_name" placeholder="First Name" value="{{ data.first_name }}"><br>
+                <label>Last Name : </label>
+                <input type="text" name="last_name" placeholder="Last Name" value="{{ data.last_name }}"><br>
+                <label>Mobile Number : </label>
+                <input type="text" name="mobile" placeholder="Mobile Number" value="{{ data.mobile }}"><br>
+                <label>Email : </label>
+                <input type="text" name="email" placeholder="Email" value="{{ data.email }}"><br>
+                <label>Address : </label>
+                <input type="text" name="address" placeholder="Address" value="{{ data.address }}"><br>
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </center>
+    </div>
+</body>
+</html>
